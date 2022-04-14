@@ -2,7 +2,7 @@
 layout: post
 title:  "Cloning a jetson nano"
 date:   2020-07-30 01:01:01 +0530
-categories: jekyll update
+categories: linux ubuntu-18.04 nvidia-jetson jetson-nano
 ---
 
 *I needed to get a clone of a Jetson nano in which I have some software installed*
@@ -11,8 +11,8 @@ categories: jekyll update
 
 # Get the device to recovery mode
 
-First the device needs to be connected in the USB recovery mode. [This forum post][1]{:target="_blank"} says you need to jump 
-both reset and recovery pins, but I only needed the reset pin
+First the device needs to be connected in the USB recovery mode. [This forum post][1]{:target="_blank"} says you need 
+to jump both reset and recovery pins, but I only needed the reset pin
 
 <img src="/assets/images/2020-07-30-01.png" alt="reset pins"/>
 
@@ -60,8 +60,8 @@ sudo ./flash.sh -r -k APP -G <image_name> <board_name> mmcblk0p1
 ```
 
 The board name can be `jetson-nano-qspi-sd`, `jetson-nano-qspi`, `jetson-tx1`, `jetson-tx2` or `jetson-xavier` depending 
-on the board (reference: [quick start guide][2]{:target="_blank"}) (My question on [Jetson developer forums][3]{:target="_blank"} 
-when I got the board name wrong).
+on the board (reference: [quick start guide][2]{:target="_blank"}) (My question on 
+[Jetson developer forums][3]{:target="_blank"} when I got the board name wrong).
 
 So for me with a sd card nano, the command is
 
@@ -69,8 +69,9 @@ So for me with a sd card nano, the command is
 sudo ./flash.sh -r -k APP -G backup.img jetson-nano-qspi-sd mmcblk0p1
 ```
 
-My flashing process stopped midway since the nano board turned off suddenly. Maybe because I used a 2A power supply. I’ll update this when 
-I get a better one and test it out. Right now can’t get the board powered up with the same supply (works with USB though)
+My flashing process stopped midway since the nano board turned off suddenly. Maybe because I used a 2A power supply. 
+I’ll update this when I get a better one and test it out. Right now can’t get the board powered up with the same 
+supply (works with USB though)
 
 > The project had to be put on hold and I never got a chance to resume it. So this is it... :-(
 
