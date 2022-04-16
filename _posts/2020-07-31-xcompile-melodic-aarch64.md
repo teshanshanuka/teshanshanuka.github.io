@@ -38,17 +38,17 @@ repository. This is not a “how to” guide. This just explains some stuff I ha
 
 # Changes from indigo to melodic
 
-**Indigo** needed *tinyxml* but **melodic** (Ubuntu18) needs [*tinyxml2*][3]
+**Indigo** needed *tinyxml* but **melodic** (Ubuntu18) needs [*tinyxml2*][3]{:target="_blank"}
 
 Below new packages were added for melodic
 
-* [gpgme and gpg-error (gpgrt)][4]
-* [log4cxx][5]
-* [openssl][6]
+* [gpgme and gpg-error (gpgrt)][4]{:target="_blank"}
+* [log4cxx][5]{:target="_blank"}
+* [openssl][6]{:target="_blank"}
 
 # Compilation
 
-The toolchains should be installed first alongside with other [needed dependencies][7].
+The toolchains should be installed first alongside with other [needed dependencies][7]{:target="_blank"}.
 
 ```sh
 sudo apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
@@ -97,9 +97,9 @@ files are copied from the target machine to the install directory. The files are
 # Cross compiling packages
 
 I was first searching for cross compiling my own set of packages. Asking about this on the Jetson dev forum lead to an 
-interesting discussion: [link][8].
+interesting discussion: [link][8]{:target="_blank"}.
 
-Later I found out that there already is a package for that provided in rostooling: [link][9].
+Later I found out that there already is a package for that provided in rostooling: [link][9]{:target="_blank"}.
 
 [1]: https://github.com/mktk1117/ROS_ARM_CROSSCOMPILE
 [2]: https://github.com/teshanshanuka/ROS_crosscompile
