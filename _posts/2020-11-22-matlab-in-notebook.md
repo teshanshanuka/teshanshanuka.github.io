@@ -77,7 +77,7 @@ notebook. Just use the magic `%%python` at the start of the cell.
 
 # Matlab cells in Python notebooks
 
-This is not as straightforward as having python cells in a Matlab notebook. Here’s how you do it [[source]][5]]
+This is not as straightforward as having python cells in a Matlab notebook. Here’s how you do it [[source]][5]
 
 1. First you have to register IPython magics
    
