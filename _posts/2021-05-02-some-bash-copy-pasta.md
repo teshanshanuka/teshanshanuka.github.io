@@ -11,8 +11,8 @@ categories: shell bash linux
 
 # Overview
 
-When you’re a programmer, you often need some scripting. But you always have to google because you don’t remember it 
-all. Here’s some stuff I often need copy pasting from stackoverflow and other places, gathered into one place.
+When you're a programmer, you often need some scripting. But you always have to google because you don't remember it 
+all. Here's some stuff I often need copy pasting from stackoverflow and other places, gathered into one place.
 
 # Loops
 

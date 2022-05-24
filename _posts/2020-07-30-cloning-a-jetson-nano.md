@@ -70,7 +70,7 @@ sudo ./flash.sh -r -k APP -G backup.img jetson-nano-qspi-sd mmcblk0p1
 ```
 
 My flashing process stopped midway since the nano board turned off suddenly. Maybe because I used a 2A power supply. 
-I’ll update this when I get a better one and test it out. Right now can’t get the board powered up with the same 
+I'll update this when I get a better one and test it out. Right now can't get the board powered up with the same 
 supply (works with USB though)
 
 > The project had to be put on hold and I never got a chance to resume it. So this is it... :-(

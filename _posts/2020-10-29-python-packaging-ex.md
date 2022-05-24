@@ -14,15 +14,15 @@ categories: python packaging setuptools
 Python is one of the best programming languages ever. However, when your python project gets bigger with multiple 
 packages and files, some things can get tricky. One is importing from different packages from different locations.
 
-I’ve had [this][1]{:target="_blank"} problem and could not find a good solution without doing appending unimportable 
-packages’ paths to the scripts needed (with `sys.path.append('<dir>')`) which is ugly and not a good practice.
+I've had [this][1]{:target="_blank"} problem and could not find a good solution without doing appending unimportable 
+packages' paths to the scripts needed (with `sys.path.append('<dir>')`) which is ugly and not a good practice.
 
 As a solution, you can have your core package pip installed alongside your python libraries so that they can be 
-imported from anywhere. Here’s how...
+imported from anywhere. Here's how...
 
 # Package description
 
-Here’s my directory structure. I have my core modules in my_pkg and a sub module sub_pkg inside
+Here's my directory structure. I have my core modules in my_pkg and a sub module sub_pkg inside
 
 ```sh
 pkging_ex/
@@ -35,7 +35,7 @@ pkging_ex/
 └── setup.py
 ```
 
-Here’s the content of **mypkg**
+Here's the content of **mypkg**
 
 ```python
 #mypkg/foolib.py
@@ -57,9 +57,9 @@ from .foolib import *
 ```
 
 The `__init__.py` has that import because I want to import the function `foo()` as `mypkg.foo` not `mypkg.foolib.foo` 
-which would be the case if I didn’t have that import statement.
+which would be the case if I didn't have that import statement.
 
-Here’s the content of **mypkg/sub_pkg**
+Here's the content of **mypkg/sub_pkg**
 
 ```python
 #mypkg/sub_pkg/barlib.py
@@ -82,7 +82,7 @@ The `__all__` list at the top of modules makes sure that only the attributes spe
 you do an `import *` from the module.
 
 # Installing
-Now we need a **setup.py** specifying how to handle the packaging. Here’s mine for this package
+Now we need a **setup.py** specifying how to handle the packaging. Here's mine for this package
 
 ```python
 import setuptools
@@ -100,7 +100,7 @@ setuptools.setup(
 
  Now just do `pip install .`
 
-Here’s a simple sample test code to test if our package got installed correctly.
+Here's a simple sample test code to test if our package got installed correctly.
 
 ```python
 from my_pkg import foo, CFoo
@@ -114,7 +114,7 @@ You can run this and see that all the functions and classes are working fine if 
 
 # Uninstalling
 
-Just `pip uninstall my_new_pkg` where ‘my_new_pkg‘ is the name given to the package in the **setup.py**
+Just `pip uninstall my_new_pkg` where 'my_new_pkg' is the name given to the package in the **setup.py**
 
 Python packaging has many more capabilities and implications. Here I have only demonstrated a minimal example. Refer 
 to [this][2] for a more detailed packaging guideline.

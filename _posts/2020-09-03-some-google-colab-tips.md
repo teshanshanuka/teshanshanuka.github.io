@@ -5,7 +5,7 @@ date:   2020-09-03 01:01:01 +0530
 categories: python jupyter-notebook google-colab
 ---
 
-*Google Colab is amazing! But sometimes it’s not easy to do everything in it that you can do on you PC. Here’s some tips 
+*Google Colab is amazing! But sometimes it's not easy to do everything in it that you can do on you PC. Here's some tips 
 and workarounds to do your frequently needed stuff in Colab*
 
 ---
@@ -30,7 +30,7 @@ from google.colab import files
 uploaded = files.upload()
 ```
 
-Say you uploaded a file named ‘data.xlsx’. You can read it like this
+Say you uploaded a file named 'data.xlsx'. You can read it like this
 
 ```python
 import pandas as pd
@@ -68,7 +68,7 @@ Click the link you get and voila! You go to a terminal inside the Colab machine
 
 # Cloning private git repos
 
-For normal repos `!git clone <url>` works fine. But for private repos, which needs authentication to access, you’ll 
+For normal repos `!git clone <url>` works fine. But for private repos, which needs authentication to access, you'll 
 need to either setup ssh keys inside the collab machine or do one of the following . [Source][1]{:target="_blank"}
 
 ```sh

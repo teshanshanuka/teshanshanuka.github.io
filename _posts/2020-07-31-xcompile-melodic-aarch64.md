@@ -63,14 +63,14 @@ Use `scripts/xcompile.sh` to start the compilation. It does the following
 2. Use `rosinstall` to create a `.rosinstall` file containing all the packages needed for the build
 3. Populate workspace with needed packages using the `.rosinstall` file
 4. Build with `catkin build`
-5. Do some post-processing stuff (explained in the ‘Post processing’ section)
+5. Do some post-processing stuff (explained in the 'Post processing' section)
 
 # Post processing
 
 Some post processing had to be done in the `xcompile.sh` script since there was some problems running the cross-compiled 
 ROS as it was.
 
-The path `<install path>/lib` contains the cross-compiled packages’ shared libraries. But ROS commands could not find 
+The path `<install path>/lib` contains the cross-compiled packages' shared libraries. But ROS commands could not find 
 them. Therefore `LD_LIBRARY_PATH` had to be modified.
 
 ```sh

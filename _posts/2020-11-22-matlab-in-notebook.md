@@ -15,7 +15,7 @@ Matlab is one of the worst languages ever despite of having many invaluable feat
 
 Previously I have had used Matlab about 5 years ago and recently needed it again. MathWorks has tried to incorporate a 
 Jupyter notebook like feature called live scripts into Matlab. While Jupyter notebook being really useful for 
-interactive coding, I had a hard time adjusting to the Matlab live scripts. So here’s how I setup Matlab with Jupyter 
+interactive coding, I had a hard time adjusting to the Matlab live scripts. So here's how I setup Matlab with Jupyter 
 notebook (After having Matlab and [Jupyter notebook][3] installed obviously)
 
 # Setting up the Matlab kernel
@@ -32,21 +32,21 @@ notebook (After having Matlab and [Jupyter notebook][3] installed obviously)
 
    `python3 -m pip install matlab-kernelCollecting matlab-kernel`
 
-These are the basic steps but [here’s a more detailed guide][4] from MathWorks if needed. Now you can start jupyter 
-notebook as usual and you’ll see a Matlab option in open new notebook drop down.
+These are the basic steps but [here's a more detailed guide][4] from MathWorks if needed. Now you can start jupyter 
+notebook as usual and you'll see a Matlab option in open new notebook drop down.
 
 <img src="/assets/images/2020-11-22-01.png" alt="drop down"/>
 
 # Matlab notebooks
 
-You can straight away start writing Matlab code in the Matlab notebook just like you have used it with python. Here’s 
+You can straight away start writing Matlab code in the Matlab notebook just like you have used it with python. Here's 
 a few tips I figured out while using the notebook
 
 
 ## Plotting
 
 Inline plots are displayed by default just like in python matplotlib plotting. However, if you need to change the plot 
-properties, you’ll have to use some Jupyter magic commands like this.
+properties, you'll have to use some Jupyter magic commands like this.
 
 1. Popup plot
 
@@ -64,7 +64,7 @@ properties, you’ll have to use some Jupyter magic commands like this.
 
 ## Matlab toolboxes and simulink
 
-They work just like how they work in the Matlab software. i.e. Type simulink and shift+enter -> you’ll get the 
+They work just like how they work in the Matlab software. i.e. Type simulink and shift+enter -> you'll get the 
 **simulink** GUI.
 
 ## Python code in Matlab notebooks
@@ -77,7 +77,7 @@ notebook. Just use the magic `%%python` at the start of the cell.
 
 # Matlab cells in Python notebooks
 
-This is not as straightforward as having python cells in a Matlab notebook. Here’s how you do it [[source]][5]
+This is not as straightforward as having python cells in a Matlab notebook. Here's how you do it [[source]][5]
 
 1. First you have to register IPython magics
    
