@@ -78,6 +78,19 @@ linux headers with `pacman -S linux-headers` which is a requirement for the driv
 1. To support mounting NTFS drives, do `pacman -S ntfs-3g`
 2. For pip and ipython which I often use, `pacman -S python-pip ipython`
 
+## Some more stuff I had to do later
+
+1. Shutdown was taking too long and showed message 'failed to start wait for network to configure'. I had two nw config 
+   services running so had to disable one. [Source][11]
+
+   ```sh
+   systemctl status NetworkManager.service      # Was running
+   systemctl status systemd-networkd.service    # Was running too
+   sudo systemctl stop systemd-networkd.service
+   sudo systemctl disable systemd-networkd.service
+   ```
+
+
 Well, that's it! Everything works like a charm. Fast and ~800mb RAM usage when idle.
 
 [1]: https://archlinux.org/download/
@@ -90,3 +103,4 @@ Well, that's it! Everything works like a charm. Fast and ~800mb RAM usage when i
 [8]: https://bbs.archlinux.org/viewtopic.php?pid=2004016#p2004016
 [9]: https://wiki.archlinux.org/title/NVIDIA#Installation
 [10]: https://aur.archlinux.org/packages/nvidia-470xx-dkms/
+[11]: https://www.reddit.com/r/archlinux/comments/gujq7s/failed_to_start_wait_for_network_to_configure/
