@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Profiling Python Code"
+title:  "Profiling Python code"
 date:   2022-10-31 01:01:01 +0530
 categories: python performance profiling
 ---
@@ -30,7 +30,7 @@ pr.print_stats()
 [Snakeviz][1] is a nice browser based graphical viewer for `cProfile` 
 
 ```python
-pr.dump_stats('filename.prof')
+pr.dump_stats("filename.prof")
 ```
 
 ```sh
@@ -42,7 +42,7 @@ snakeviz filename.prof
 
 # pprofile
 
-Gives out a nice output that has a line by line profiling info for the code. [PyPi][3]
+[Pprofile][3] gives out a nice output that has a line by line profiling info for the code.
 
 ```python
 # Example from the PyPi page https://pypi.org/project/pprofile/
@@ -64,6 +64,12 @@ def someOtherHotSpotCallable():
     ):
         # *** Code to profile *** #
     prof.print_stats()
+```
+
+You can dump stats to a nice readable text file as well.
+
+```python
+prof.dump_stats("filename.txt")
 ```
 
 [1]: https://pypi.org/project/snakeviz/
